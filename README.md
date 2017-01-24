@@ -13,7 +13,7 @@ oVirt是Red Hat Enterprise Virtualization產品的基石，是RHEV的一個上�
 - 自助服務控制台提供簡單或高級的用例
 
 # oVirt架構
-[oVirt]!(http://img2016.itdadao.com/d/file/tech/2016/12/14/it286478141122041.png)
+![oVirt](http://img2016.itdadao.com/d/file/tech/2016/12/14/it286478141122041.png)
 
 Host:運行Hypervisor的Server，oVirt的Hypervisor是KVM 。
 
@@ -40,4 +40,16 @@ ovirt-engine：主要用於(批量)部署，監聽，導入/導出，開關機�
 ovirt-nodes：物理服務器，虛擬化軟件和虛擬機都運行在上面。
 storage-nodes：存儲節點，主要存儲虛擬機的鏡像和ISOs。
 
-是一個定制化的只讀的類Linux系統，包含VDSM，libvirt和qemu-kvm，對外主要提供kvm的虛擬化，其中有cpu/io/network虛擬化。
+# ovirt-node 
+ovirt-node 是開源社區oVirt 的一個開源項目，它是基於KVM 和Linux 技術的一套最小化的Linux 系統，它只提供最基本的操作系統功能以及虛擬機管理等。
+
+簡單地說ovirt-node 是一個小的主機鏡像，該鏡像提供libvirt/vdsm(Virtual Desktop Server Manager) 和KVM(Kernel based virtual machine) 等，虛擬化服務，使用libvirt/vdsm 管理KVM 虛擬機。
+
+ovirt-node 與普通的linux 發行版的區別在於,ovirt-node 專注於提供虛擬化功能，它只包含了最小化的操作系統所需要的軟件和虛擬機管理軟件, 大約只有200 多個rpm 安裝包；具備良好管理界面的API。相比於普通的Linux 發行版，ovirt-node 的只需要一個很小的運行環境，其安裝鏡像小於150M，安裝到磁盤空間也只有不到1G，運行時存儲器僅需500M，另外，也可以根據需求定制虛擬機管理軟件，如libvirt/VDSM。
+
+正因為ovirt-node 是基於minimal fedora 系統進行定制化的，所以使得ovirt-node 的安裝鏡像很小，除了需要安裝一些必要的系統管理軟件，網絡管理軟件等，還需要包含kvm 模塊，一起管理kvm的libvirt 或VDSM 等。因此，完全可以忽略由於運行ovirt-node 帶來的資源的開銷，從而，可以將更多的資源分配給節點中的虛擬機。
+![ovirt-note](http://www.ibm.com/developerworks/cn/linux/l-cn-ovirt/image001.jpg)
+#整個虛擬化平台的各部分構成#
+
+# 總結
+oVirt 是一個開源的虛擬化平台，目前持續在開發與解決軟體細節問題，是在未來開源虛擬化管理平台的一項好工具。
