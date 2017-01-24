@@ -49,7 +49,7 @@ ovirt-node 與普通的linux 發行版的區別在於,ovirt-node 專注於提供
 
 正因為ovirt-node 是基於minimal fedora 系統進行定制化的，所以使得ovirt-node 的安裝鏡像很小，除了需要安裝一些必要的系統管理軟件，網絡管理軟件等，還需要包含kvm 模塊，一起管理kvm的libvirt 或VDSM 等。因此，完全可以忽略由於運行ovirt-node 帶來的資源的開銷，從而，可以將更多的資源分配給節點中的虛擬機。
 ![ovirt-note](http://www.ibm.com/developerworks/cn/linux/l-cn-ovirt/image001.jpg)
-#整個虛擬化平台的各部分構成#
+
 
 # 總結
 oVirt 是一個開源的虛擬化平台，目前持續在開發與解決軟體細節問題，是在未來開源虛擬化管理平台的一項好工具。
