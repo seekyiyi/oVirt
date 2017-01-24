@@ -13,7 +13,7 @@ oVirt是Red Hat Enterprise Virtualization產品的基石，是RHEV的一個上�
 - 自助服務控制台提供簡單或高級的用例
 
 # oVirt架構
-[oVirt!](http://img2016.itdadao.com/d/file/tech/2016/12/14/it286478141122041.png)
+[oVirt]!(http://img2016.itdadao.com/d/file/tech/2016/12/14/it286478141122041.png)
 
 Host:運行Hypervisor的Server，oVirt的Hypervisor是KVM 。
 
